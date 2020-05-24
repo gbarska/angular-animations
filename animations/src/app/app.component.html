@@ -9,8 +9,12 @@
                 (click)="goal.isActiveGoal = !goal.isActiveGoal"></app-goal>
                  -->
                  <div class="interesting">
-                        <app-quote class="favorite"></app-quote>
-                 </div>
+                        <app-quote
+                        (click)="isFavorite = !isFavorite"
+                        [ngClass]="{'favorite super-favorite': isFavorite}"
+                        [ngStyle]="{'width.px': isFavorite ? 600 : 400 }"
+                        >
+                         </app-quote>
                  <div class="boring">
                         <app-quote></app-quote>
                  </div>

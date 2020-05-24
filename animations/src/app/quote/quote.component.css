@@ -2,16 +2,14 @@ h1 {
     color:red;
 }
 
-
 /* special selector ANGULAR */
 :host{
     display: block;
     border: 1px solid black;
-    /* border-radius: 5px 5px 0 0; */
-    width: 300px;
     padding: 20px;
     margin: 0px;
-    /* text-align: center; */
+    width: 300px;
+    /* background-color: lightblue; */
 }
 
 /* applies the style if the component is marked with the classs favorite */
@@ -24,7 +22,6 @@ h1 {
  with the classs boring */
 :host-context(.boring){
     border: 1px solid #ccc;
-    /* color: #ccc; */
 }
 /* same as before but also it must be child of the element with id: very-boring */
 :host-context(.boring #very-boring){
