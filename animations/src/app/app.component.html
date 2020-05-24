@@ -15,14 +15,19 @@
                         [ngStyle]="{'width.px': isFavorite ? 600 : 400 }"
                         >
                          </app-quote>
-                 <div class="boring">
-                        <app-quote></app-quote>
+                 
+                 <button class="btn btn-primary my-2" 
+                 (click)="onShowBoring(boringBlock)">Show boring Quotes</button>
+
+                 <div class="boring" #boringBlock>
+                    
+                    <app-quote></app-quote>
+                    
+                    <div id="very-boring">
+                        <app-quote ></app-quote>
+                    </div>
                  </div>
-                 <div class="boring">
-                     <div id="very-boring">
-                            <app-quote ></app-quote>
-                     </div>
-                 </div>
+                
         </div>
     </div>
 </div>

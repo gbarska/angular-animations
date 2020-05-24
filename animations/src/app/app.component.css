@@ -2,3 +2,6 @@
 app-quote {
     font-size: 16px;
 }
+.boring{
+    display: none;
+}
