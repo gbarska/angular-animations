@@ -11,7 +11,7 @@ h1 {
     width: 300px;
     padding: 20px;
     margin: 0px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 /* applies the style if the component is marked with the classs favorite */
@@ -28,5 +28,12 @@ h1 {
 }
 /* same as before but also it must be child of the element with id: very-boring */
 :host-context(.boring #very-boring){
+    color: #ccc;
+}
+
+
+/* aplies the setup for the component and classes or elements
+elements present in any of the component's children and so on.. deeply */
+:host-context(.boring #very-boring) /deep/ h1{
     color: #ccc;
 }

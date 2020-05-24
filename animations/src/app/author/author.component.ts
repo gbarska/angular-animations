@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
     h1{
       margin: 0;
       font-size: 12px;
-      color: #8c8c8c;
+      /* color: #8c8c8c; */
     }
   `]
 })
