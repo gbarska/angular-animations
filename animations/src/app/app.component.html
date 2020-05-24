@@ -8,8 +8,20 @@
                 [ngClass]="{active: goal.isActiveGoal}"
                 (click)="goal.isActiveGoal = !goal.isActiveGoal"></app-goal>
                  -->
-                <app-quote></app-quote>
-                <app-author></app-author>
+                 <div class="interesting">
+                        <app-quote class="favorite"></app-quote>
+                        <app-author></app-author>
+                 </div>
+                 <div class="boring">
+                        <app-quote></app-quote>
+                        <app-author></app-author>
+                 </div>
+                 <div class="boring">
+                     <div id="very-boring">
+                            <app-quote ></app-quote>
+                            <app-author></app-author>
+                     </div>
+                 </div>
         </div>
     </div>
 </div>

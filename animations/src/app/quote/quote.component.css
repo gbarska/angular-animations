@@ -1,3 +1,32 @@
 h1 {
     color:red;
 }
+
+
+/* special selector ANGULAR */
+:host{
+    display: block;
+    border: 1px solid black;
+    /* border-radius: 5px 5px 0 0; */
+    width: 300px;
+    padding: 20px;
+    margin: 0px;
+    text-align: center;
+}
+
+/* applies the style if the component is marked with the classs favorite */
+:host(.favorite){
+    border: 1px solid red;
+    padding: 18px;
+}
+
+/* applies the style if the component is child of any element
+ with the classs boring */
+:host-context(.boring){
+    border: 1px solid #ccc;
+    /* color: #ccc; */
+}
+/* same as before but also it must be child of the element with id: very-boring */
+:host-context(.boring #very-boring){
+    color: #ccc;
+}
