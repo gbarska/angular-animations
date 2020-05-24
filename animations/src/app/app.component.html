@@ -1,14 +1,15 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-                <h1>The goals</h1>
-
-                <app-goal *ngFor="let goal of courseGoals" 
+                <h1>The App</h1>
+                <!-- 
+                <app-goal *ngFor="let goal of courseGoals"
                 [goal]="goal"
                 [ngClass]="{active: goal.isActiveGoal}"
                 (click)="goal.isActiveGoal = !goal.isActiveGoal"></app-goal>
-                
+                 -->
                 <app-quote></app-quote>
+                <app-author></app-author>
         </div>
     </div>
 </div>
