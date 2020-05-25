@@ -1,0 +1,12 @@
+:host {
+    display: block;
+    width: 70%;
+}
+
+.marked{
+    border: 2px solid red;
+}
+
+.inactive{
+    border: 1px solid #ccc;
+}
