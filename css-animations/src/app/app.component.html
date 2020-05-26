@@ -1,0 +1,14 @@
+<div class="transition" (click)="divClicked = true"
+[ngStyle]="{backgroundColor: divClicked ? 'red' : 'blue'}"
+[ngClass]="{'wider': divClicked }">
+Trasition-Example</div>
+
+<hr>
+
+<div id="animation"
+(click)="divAnimated = true"
+[ngClass]="{'animate': divAnimated}"
+>
+Animation-Example
+</div>
+

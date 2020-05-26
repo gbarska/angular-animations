@@ -1,0 +1,46 @@
+*{
+    margin: 80px;
+}
+
+.transition {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: background-color 5s ease-out 0.8s, width 1s ease-in 0.1s;
+    color: #ccc;
+}
+
+.wider{
+    width: 200px;
+}
+
+
+#animation{
+    width: 200px;
+    height: 100px;
+    background-color: green;
+}
+
+.animate{
+    animation: moved 4s ease-out forwards;
+}
+
+@keyframes moved{
+    0%{
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+
+    50%{
+        transform: translateX(300px) scale(1.2);
+    }
+    
+    75%{
+        transform: translateX(400px) scale(1);
+        opacity: 0.3;
+    }
+    100%{
+        transform: translateX(400px) scale(1);
+        opacity: 0.1;
+    }
+}

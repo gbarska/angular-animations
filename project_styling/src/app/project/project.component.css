@@ -6,6 +6,7 @@
     border-radius: 3px;
     box-shadow: 3px 3px 2px #ccc;
     width: 800px;
+    transition: border-color 1s ease-out;
 }
 
 .select {
@@ -17,8 +18,11 @@
 }
 
 :host(.marked){
-       padding: 19px;
+    padding: 19px;
 }
+
 :host(.inactive){
     color: #ccc;
+    padding: 20px;
+
 }
