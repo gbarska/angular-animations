@@ -1,7 +1,6 @@
 :host {
     display: block;
     width: 70%;
-    
 }
 
 .loading-bar{
@@ -10,7 +9,6 @@
     border: 1px solid black;
     margin: auto;
 }
-
 
 .loading-bar-element{
     width: 0px;
@@ -29,16 +27,16 @@
     }
 }
 
-.marked{
-    border: 2px solid red;
-    animation: marked 0.5s ease-out forwards;
-}
-
 .inactive{
     border: 1px solid #ccc;
 }
 
-@keyframes marked{
+/* .marked{
+    border: 2px solid red;
+    animation: marked 0.5s ease-out forwards;
+} */
+
+/* @keyframes marked{
     0%{
         transform: scale(1);
     }
@@ -48,4 +46,4 @@
     100%{
         transform: scale(1);
     }
-}
+} */

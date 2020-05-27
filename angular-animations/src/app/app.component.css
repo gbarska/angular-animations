@@ -1,0 +1,15 @@
+#simple{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+}
+
+.base{
+    width: 100px;
+    height: 100px;
+}
+
+span{
+    margin: 1px;
+    display: inline-block;
+}

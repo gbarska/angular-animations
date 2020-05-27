@@ -1,12 +1,12 @@
 :host{
     display: block;
-    border: 1px solid black;
     margin: 20px 0;  
-    padding: 20px;
     border-radius: 3px;
     box-shadow: 3px 3px 2px #ccc;
     width: 800px;
-    transition: border-color 1s ease-out;
+    /* transition: border-color 1s ease-out; */
+    /* padding: 20px; */
+    /* border: 1px solid black; */
 }
 
 .select {
@@ -17,12 +17,11 @@
     display: inline-block;
 }
 
-:host(.marked){
+/* :host(.marked){
     padding: 19px;
-}
+} */
 
 :host(.inactive){
     color: #ccc;
     padding: 20px;
-
 }
