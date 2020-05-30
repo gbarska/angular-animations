@@ -1,20 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 
 import { Project } from './project.model';
-
+import { AnimationEvent } from '@angular/animations';
 import { ProjectsService } from './projects.service';
-import { markedTrigger } from './animations';
+import { markedTrigger, itemStateTrigger, slideStateTrigger } from './animations';
+import { routeFadeStateTrigger, routeSlideStateTrigger } from '../shared/route-animations';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css'],
   animations: [ 
-    markedTrigger
+    markedTrigger,
+    itemStateTrigger,
+    slideStateTrigger,
+    routeFadeStateTrigger,
+    routeSlideStateTrigger
   ]
 })
 export class ProjectsComponent implements OnInit {
+  // @HostBinding('@routeFadeState') routeAnimation = true;
+  @HostBinding('@routeSlideState') routeAnimation = true;
+
   projects: Project[];
+  displayedProjects: Project[] = [];
   markedPrjIndex = 0;
   progress = 'progressing';
   createNew = false;
@@ -27,6 +36,9 @@ export class ProjectsComponent implements OnInit {
         (prj: Project[]) => {
           this.progress = 'finished';
           this.projects = prj;
+          if(this.projects.length >= 1){
+            this.displayedProjects.push(this.projects[0]);
+          }
         }
       );
   }
@@ -41,6 +53,22 @@ export class ProjectsComponent implements OnInit {
 
   onProjectCreated(project: Project) {
     this.createNew = false;
-    this.projects.push(project);
+    //wait some time to finish the slidup animations before adding a new projct
+    //which would fire another event and mess up all things
+    setTimeout(() => {
+    this.projects.unshift(project);
+    },400);
+  }
+
+  onItemAdded(event: AnimationEvent, lastProjectIndex: number){
+    if(event.fromState != 'void'){
+      return;
+    }
+    if(this.projects.length > lastProjectIndex +1){
+    this.displayedProjects.push(this.projects[lastProjectIndex+1]);   
+    }
+    else{
+      this.projects = this.displayedProjects;
+    }
   }
 }
