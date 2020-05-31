@@ -11,6 +11,8 @@ import { routeFadeStateTrigger, routeSlideStateTrigger } from '../shared/route-a
   ]
 })
 export class UsersComponent implements OnInit {
+  //this child animations gets overiden by the angular router animations placed
+  // at the appcomponent wich is the parent animation
   @HostBinding('@routeFadeState') routeAnimation = true;
   // @HostBinding('@routeSlideState') routeAnimation = true;
 
